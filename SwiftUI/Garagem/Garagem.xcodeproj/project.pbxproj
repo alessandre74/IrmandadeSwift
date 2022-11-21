@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93DD34B628B4CD58009EB8C3 /* GaragemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD34B528B4CD58009EB8C3 /* GaragemApp.swift */; };
+		93DD34B828B4CD58009EB8C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD34B728B4CD58009EB8C3 /* ContentView.swift */; };
+		93DD34BA28B4CD59009EB8C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93DD34B928B4CD59009EB8C3 /* Assets.xcassets */; };
+		93DD34BD28B4CD59009EB8C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93DD34BC28B4CD59009EB8C3 /* Preview Assets.xcassets */; };
+		93DD34C728B4CDFC009EB8C3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD34C628B4CDFC009EB8C3 /* Utils.swift */; };
+		93DD34C928B4CE64009EB8C3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD34C828B4CE64009EB8C3 /* Person.swift */; };
+		93DD34CB28B4CE74009EB8C3 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD34CA28B4CE74009EB8C3 /* Car.swift */; };
+		93DD34CD28B4CEC4009EB8C3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD34CC28B4CEC4009EB8C3 /* DetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		93DD34B228B4CD58009EB8C3 /* Garagem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Garagem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93DD34B528B4CD58009EB8C3 /* GaragemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaragemApp.swift; sourceTree = "<group>"; };
+		93DD34B728B4CD58009EB8C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		93DD34B928B4CD59009EB8C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93DD34BC28B4CD59009EB8C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		93DD34C628B4CDFC009EB8C3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		93DD34C828B4CE64009EB8C3 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		93DD34CA28B4CE74009EB8C3 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		93DD34CC28B4CEC4009EB8C3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93DD34AF28B4CD58009EB8C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93DD34A928B4CD58009EB8C3 = {
+			isa = PBXGroup;
+			children = (
+				93DD34B428B4CD58009EB8C3 /* Garagem */,
+				93DD34B328B4CD58009EB8C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93DD34B328B4CD58009EB8C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93DD34B228B4CD58009EB8C3 /* Garagem.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93DD34B428B4CD58009EB8C3 /* Garagem */ = {
+			isa = PBXGroup;
+			children = (
+				93DD34B528B4CD58009EB8C3 /* GaragemApp.swift */,
+				93DD34C328B4CDA1009EB8C3 /* Resources */,
+				93DD34C428B4CDB5009EB8C3 /* Screen */,
+				93DD34C528B4CDC0009EB8C3 /* Model */,
+				93DD34BB28B4CD59009EB8C3 /* Preview Content */,
+			);
+			path = Garagem;
+			sourceTree = "<group>";
+		};
+		93DD34BB28B4CD59009EB8C3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				93DD34BC28B4CD59009EB8C3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		93DD34C328B4CDA1009EB8C3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93DD34C628B4CDFC009EB8C3 /* Utils.swift */,
+				93DD34B928B4CD59009EB8C3 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		93DD34C428B4CDB5009EB8C3 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				93DD34B728B4CD58009EB8C3 /* ContentView.swift */,
+				93DD34CC28B4CEC4009EB8C3 /* DetailView.swift */,
+			);
+			name = Screen;
+			sourceTree = "<group>";
+		};
+		93DD34C528B4CDC0009EB8C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93DD34C828B4CE64009EB8C3 /* Person.swift */,
+				93DD34CA28B4CE74009EB8C3 /* Car.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93DD34B128B4CD58009EB8C3 /* Garagem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93DD34C028B4CD59009EB8C3 /* Build configuration list for PBXNativeTarget "Garagem" */;
+			buildPhases = (
+				93DD34AE28B4CD58009EB8C3 /* Sources */,
+				93DD34AF28B4CD58009EB8C3 /* Frameworks */,
+				93DD34B028B4CD58009EB8C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Garagem;
+			productName = Garagem;
+			productReference = 93DD34B228B4CD58009EB8C3 /* Garagem.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93DD34AA28B4CD58009EB8C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					93DD34B128B4CD58009EB8C3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 93DD34AD28B4CD58009EB8C3 /* Build configuration list for PBXProject "Garagem" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93DD34A928B4CD58009EB8C3;
+			productRefGroup = 93DD34B328B4CD58009EB8C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93DD34B128B4CD58009EB8C3 /* Garagem */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93DD34B028B4CD58009EB8C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93DD34BD28B4CD59009EB8C3 /* Preview Assets.xcassets in Resources */,
+				93DD34BA28B4CD59009EB8C3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93DD34AE28B4CD58009EB8C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93DD34B828B4CD58009EB8C3 /* ContentView.swift in Sources */,
+				93DD34CD28B4CEC4009EB8C3 /* DetailView.swift in Sources */,
+				93DD34B628B4CD58009EB8C3 /* GaragemApp.swift in Sources */,
+				93DD34CB28B4CE74009EB8C3 /* Car.swift in Sources */,
+				93DD34C928B4CE64009EB8C3 /* Person.swift in Sources */,
+				93DD34C728B4CDFC009EB8C3 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		93DD34BE28B4CD59009EB8C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		93DD34BF28B4CD59009EB8C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93DD34C128B4CD59009EB8C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Garagem/Preview Content\"";
+				DEVELOPMENT_TEAM = 4PQRRUMYY2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alessandre.Garagem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93DD34C228B4CD59009EB8C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Garagem/Preview Content\"";
+				DEVELOPMENT_TEAM = 4PQRRUMYY2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alessandre.Garagem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93DD34AD28B4CD58009EB8C3 /* Build configuration list for PBXProject "Garagem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93DD34BE28B4CD59009EB8C3 /* Debug */,
+				93DD34BF28B4CD59009EB8C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93DD34C028B4CD59009EB8C3 /* Build configuration list for PBXNativeTarget "Garagem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93DD34C128B4CD59009EB8C3 /* Debug */,
+				93DD34C228B4CD59009EB8C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93DD34AA28B4CD58009EB8C3 /* Project object */;
+}

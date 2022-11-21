@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='01 - Optional'/>
+        <page name='02 - Arrays'/>
+        <page name='03 - For-in &amp; Range'/>
+        <page name='04 - Tuplas'/>
+        <page name='05 - Dictionary'/>
+        <page name='06 - Switch'/>
+        <page name='07 - Functions &amp; Methods'/>
+        <page name='08 - Filtering &amp; Ordering Collections'/>
+        <page name='09 - Class 01'/>
+        <page name='10 - Class 02'/>
+        <page name='11 - Struct'/>
+        <page name='12 - Struct vs Class'/>
+        <page name='13 - Dicas Struct &amp; Class'/>
+        <page name='14 - Stored &amp; Type Properties'/>
+        <page name='15 - inheritance &amp; Override'/>
+        <page name='16 - Enum'/>
+        <page name='17 - Protocol Basics'/>
+        <page name='18 - Protocol - Polymorphism'/>
+        <page name='19 - Protocol - Type Casting'/>
+        <page name='20 - Protocol - Requirements'/>
+        <page name='21 - Protocol - Oriented Features'/>
+        <page name='22 - Closures'/>
+        <page name='23 - ForEach'/>
+        <page name='24 - liveCode3 - Error'/>
+    </pages>
+</playground>
