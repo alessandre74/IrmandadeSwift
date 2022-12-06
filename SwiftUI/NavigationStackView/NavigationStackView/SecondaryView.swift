@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SecondaryView: View {
     @State var myCar: Car
-    
+
     var body: some View {
         VStack {
             Text(myCar.name)
@@ -17,7 +17,6 @@ struct SecondaryView: View {
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(myCar.color)
-        
     }
 }
 

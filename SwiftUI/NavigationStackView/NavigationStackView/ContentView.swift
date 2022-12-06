@@ -10,12 +10,12 @@ import SwiftUI
 struct ContentView: View {
     @State var myCars = garagem
     @State var mapStack: [Car] = []
-    
+
     var body: some View {
-        NavigationStack (path: $mapStack) {
+        NavigationStack(path: $mapStack) {
             VStack {
                 List {
-                    ForEach(myCars){ car in
+                    ForEach(myCars) { car in
                         NavigationLink(value: car) {
                             Label(car.name, systemImage: "car")
                         }
@@ -32,20 +32,19 @@ struct ContentView: View {
 struct NavigationStackView1: View {
     @State var myColors: [Color] = [.green, .pink, .mint, .cyan]
     @State var mapStack: [Color] = []
-    
+
     var body: some View {
-        NavigationStack (path: $mapStack) {
+        NavigationStack(path: $mapStack) {
             VStack {
-                ForEach(myColors, id:\.self){ color in
+                ForEach(myColors, id: \.self) { color in
                     NavigationLink(value: color) {
                         Circle().fill(color)
                     }
                 }
-                
+
                 Button("Partiu!") {
-                    Task{ await partiu() }
+                    Task { await partiu() }
                 }
-                
             }
             .navigationDestination(for: Color.self) { selectedColor in
                 selectedColor
@@ -60,23 +59,23 @@ struct NavigationStackView1: View {
 
 extension NavigationStackView1 {
     func partiu() async {
-        //adiciona stack
+        // adiciona stack
         mapStack.append(.brown)
-        try? await Task.sleep(nanoseconds: UInt64(1 * 1_000_000_000))
+        try? await Task.sleep(nanoseconds: UInt64(1 * 1000000000))
         mapStack.append(.yellow)
-        try? await Task.sleep(nanoseconds: UInt64(1 * 1_000_000_000))
+        try? await Task.sleep(nanoseconds: UInt64(1 * 1000000000))
         mapStack.append(.red)
-        try? await Task.sleep(nanoseconds: UInt64(1 * 1_000_000_000))
+        try? await Task.sleep(nanoseconds: UInt64(1 * 1000000000))
         mapStack.append(.purple)
-        try? await Task.sleep(nanoseconds: UInt64(1 * 1_000_000_000))
-        
-        //remove stack
+        try? await Task.sleep(nanoseconds: UInt64(1 * 1000000000))
+
+        // remove stack
         mapStack.remove(at: mapStack.firstIndex(of: .purple)!)
-        try? await Task.sleep(nanoseconds: UInt64(1.1 * 1_000_000_000))
+        try? await Task.sleep(nanoseconds: UInt64(1.1 * 1000000000))
         mapStack.remove(at: mapStack.firstIndex(of: .red)!)
-        try? await Task.sleep(nanoseconds: UInt64(1.1 * 1_000_000_000))
+        try? await Task.sleep(nanoseconds: UInt64(1.1 * 1000000000))
         mapStack.remove(at: mapStack.firstIndex(of: .yellow)!)
-        try? await Task.sleep(nanoseconds: UInt64(1.1 * 1_000_000_000))
+        try? await Task.sleep(nanoseconds: UInt64(1.1 * 1000000000))
         mapStack.remove(at: mapStack.firstIndex(of: .brown)!)
     }
 }
