@@ -2,68 +2,66 @@
 // Created by Michel Lopes.
 // Copyright (c) 2021 Michel Lopes. All rights reserved.
 //
-    
 
 import SwiftUI
 
+// MARK: - Fields
 
-//MARK: - Fields
-enum FormField: CaseIterable{
+enum FormField: CaseIterable {
     case name, lastName, age, phone, email, pass
 }
 
+// MARK: - Screen
 
-//MARK: - Screen
 struct ContentView: View {
     @FocusState var selectedField: FormField?
     @State private var user = User()
-    
+
     var body: some View {
         BodyView {
-            List{
-                ///Personal Data --
-                Section(header:Text("Personal")){
+            List {
+                /// Personal Data --
+                Section(header: Text("Personal")) {
                     PersonalDataView(user: $user, selectedField: $selectedField)
                 }
-                ///Contact Data --
-                Section(header:Text("Contact")){
+                /// Contact Data --
+                Section(header: Text("Contact")) {
                     ContactFieldsView(user: $user, selectedField: $selectedField)
                 }
-                ///Security Data --
-                Section(header:Text("Security")){
+                /// Security Data --
+                Section(header: Text("Security")) {
                     SecurityView(user: $user, selectedField: $selectedField)
                 }
             }
             .listStyle(.insetGrouped)
             .animation(.easeInOut(duration: 0.2), value: selectedField)
-            
-            ///Keyboard Interaction Area --
-            if selectedField != nil{ KeyboardInteractionView(selectedField: $selectedField)}
-            
-            ///Form Action Buttons --
-            if selectedField == nil{ EndActionView(user: $user) }
+
+            /// Keyboard Interaction Area --
+            if selectedField != nil { KeyboardInteractionView(selectedField: $selectedField) }
+
+            /// Form Action Buttons --
+            if selectedField == nil { EndActionView(user: $user) }
         }
     }
 }
 
+// MARK: - Personal Section
 
-//MARK: - Personal Section
-struct PersonalDataView: View{
+struct PersonalDataView: View {
     @Binding var user: User
     var selectedField: FocusState<FormField?>.Binding
-    
-    var body: some View{
-        
-        Group{
-            ///Name --
-            HStack{
+
+    var body: some View {
+        Group {
+            /// Name --
+            HStack {
                 Label("Name:", systemImage: "rectangle.and.pencil.and.ellipsis").foregroundColor(.black)
                 TextField("MyName...", text: $user.name)
                     .keyboardType(.alphabet)
                     .focused(selectedField, equals: .name)
                     .modifier(StandardFormFieldStyle())
             }
-            ///LastName --
+            /// LastName --
             HStack {
                 Label("LastName:", systemImage: "rectangle.and.pencil.and.ellipsis")
                     .foregroundColor(.black)
@@ -72,11 +70,11 @@ struct PersonalDataView: View{
                     .focused(selectedField, equals: .lastName)
                     .modifier(StandardFormFieldStyle())
             }
-            ///Age --
+            /// Age --
             HStack {
                 Label("Age:", systemImage: "number")
                     .foregroundColor(.black)
-                
+
                 TextField("MyAge..", value: $user.age, format: .number, prompt: Text("MyAge.."))
                     .focused(selectedField, equals: .age)
                     .keyboardType(.numberPad)
@@ -86,15 +84,15 @@ struct PersonalDataView: View{
     }
 }
 
+// MARK: - Contat Section
 
-//MARK: - Contat Section
-struct ContactFieldsView: View{
+struct ContactFieldsView: View {
     @Binding var user: User
     var selectedField: FocusState<FormField?>.Binding
-    
-    var body: some View{
-        Group{
-            ///Phone --
+
+    var body: some View {
+        Group {
+            /// Phone --
             HStack {
                 Label("Phone:", systemImage: "phone.bubble.left")
                     .foregroundColor(.black)
@@ -103,7 +101,7 @@ struct ContactFieldsView: View{
                     .keyboardType(.numberPad)
                     .modifier(StandardFormFieldStyle())
             }
-            ///Email --
+            /// Email --
             HStack {
                 Label("Email:", systemImage: "envelope")
                     .foregroundColor(.black)
@@ -115,17 +113,16 @@ struct ContactFieldsView: View{
         }
     }
 }
-    
 
-//MARK: - Security Section
-struct SecurityView: View{
-    
+// MARK: - Security Section
+
+struct SecurityView: View {
     @Binding var user: User
     var selectedField: FocusState<FormField?>.Binding
-    
-    var body: some View{
-        Group{
-            ///Password --
+
+    var body: some View {
+        Group {
+            /// Password --
             HStack {
                 Label("Password:", systemImage: "touchid")
                     .foregroundColor(.black)
@@ -137,18 +134,17 @@ struct SecurityView: View{
     }
 }
 
+// MARK: - Keyboard
 
-//MARK: - Keyboard
-struct KeyboardInteractionView: View{
+struct KeyboardInteractionView: View {
     var selectedField: FocusState<FormField?>.Binding
-    
-    var body: some View{
-        VStack(spacing:0) {
+
+    var body: some View {
+        VStack(spacing: 0) {
             Divider()
             HStack {
-                HStack(spacing:0){
-                    
-                    ///Back to previous --
+                HStack(spacing: 0) {
+                    /// Back to previous --
                     Button {
                         selectedField.wrappedValue = moveField(current: selectedField.wrappedValue, toPrevious: true)
                     } label: {
@@ -159,10 +155,10 @@ struct KeyboardInteractionView: View{
                     .disabled(FormField.allCases.first == selectedField.wrappedValue)
                     .controlSize(.large)
                     .padding()
-                    
+
                     Divider()
-                    
-                    ///Advance to next --
+
+                    /// Advance to next --
                     Button {
                         selectedField.wrappedValue = moveField(current: selectedField.wrappedValue, toPrevious: false)
                     } label: {
@@ -175,8 +171,8 @@ struct KeyboardInteractionView: View{
                     .padding()
                 }
                 Spacer()
-                
-                ///Advance to next --
+
+                /// Advance to next --
                 Button { selectedField.wrappedValue = nil } label: {
                     Text("Done")
                         .bold()
@@ -184,29 +180,28 @@ struct KeyboardInteractionView: View{
                 .controlSize(.large)
                 .padding()
             }
-            .padding(.leading,8)
-            .padding(.trailing,8)
-            .frame(minWidth:0, maxWidth: .infinity, minHeight: 0, maxHeight: 40)
+            .padding(.leading, 8)
+            .padding(.trailing, 8)
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 40)
             .background(.white.opacity(0.9))
             .opacity(selectedField.wrappedValue == nil ? 0 : 1)
         }
     }
 }
 
+// MARK: - Form Buttons
 
-//MARK: - Form Buttons
-struct EndActionView: View{
+struct EndActionView: View {
     @Binding var user: User
     @State var isSendAlertShowing = false
     @State var isCleanAlertShowing = false
-    
-    var body: some View{
+
+    var body: some View {
         VStack {
-            
-            ///Send Button --
+            /// Send Button --
             Button { isSendAlertShowing = true } label: {
                 Label("Enviar Formulário", systemImage: "paperplane.fill")
-                    .frame(minWidth:30, maxWidth: .infinity)
+                    .frame(minWidth: 30, maxWidth: .infinity)
                     .font(.body.weight(.semibold))
             }
             .buttonStyle(.borderedProminent)
@@ -216,13 +211,13 @@ struct EndActionView: View{
                     isSendAlertShowing = false
                 }
             }
-            
-            ///Clear Button --
+
+            /// Clear Button --
             Button {
                 isCleanAlertShowing = true
             } label: {
                 Label("Limpar Formulário", systemImage: "trash")
-                    .frame(minWidth:30, maxWidth: .infinity)
+                    .frame(minWidth: 30, maxWidth: .infinity)
                     .font(.body.weight(.light))
             }
             .buttonStyle(.borderedProminent)
@@ -239,13 +234,13 @@ struct EndActionView: View{
                 }
             }
         }
-        .frame(minWidth:0, maxWidth: .infinity)
+        .frame(minWidth: 0, maxWidth: .infinity)
         .padding()
         .background(.thinMaterial)
     }
-    
-    ///Reset fields --
-    func clearAllFields(){
+
+    /// Reset fields --
+    func clearAllFields() {
         user.name = ""
         user.lastName = ""
         user.age = nil
@@ -255,9 +250,9 @@ struct EndActionView: View{
     }
 }
 
+// MARK: - Custom Modifiers
 
-//MARK: - Custom Modifiers
-struct StandardFormFieldStyle: ViewModifier{
+struct StandardFormFieldStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .disableAutocorrection(true)
@@ -267,47 +262,47 @@ struct StandardFormFieldStyle: ViewModifier{
     }
 }
 
+// MARK: - Helpers
 
-//MARK: - Helpers
-func moveField(current: FormField?, toPrevious: Bool = false) -> FormField{
+func moveField(current: FormField?, toPrevious: Bool = false) -> FormField {
     let list = FormField.allCases
-    
+
     guard let currentField = current else {
         return .lastName
     }
-    
+
     guard let currentIndex = list.firstIndex(of: currentField) else {
         return toPrevious ? .pass : .name
     }
-    
+
     let desiredIndex = toPrevious ? list.index(before: currentIndex) : list.index(after: currentIndex)
     guard list.indices.contains(desiredIndex) else {
         return toPrevious ? .pass : .name
     }
-    
+
     return list[desiredIndex]
 }
 
+// MARK: - Main Layout
 
-//MARK: - Main Layout
 struct BodyView<Content: View>: View {
     @State private var isInfoAlertShowing = false
     let content: Content
-    
-    init(@ViewBuilder content: () -> Content){
+
+    init(@ViewBuilder content: () -> Content) {
         self.content = content()
     }
-    
+
     var body: some View {
         NavigationView {
-            VStack (spacing:0) {
-                ZStack (alignment:.bottom) {
-                    ///Content --
+            VStack(spacing: 0) {
+                ZStack(alignment: .bottom) {
+                    /// Content --
                     self.content
                 }
             }
             .navigationTitle("Register")
-            ///Toolbar --
+            /// Toolbar --
             .toolbar {
                 Button { isInfoAlertShowing = true } label: {
                     Image(systemName: "info.circle")
@@ -322,8 +317,8 @@ struct BodyView<Content: View>: View {
     }
 }
 
+// MARK: - Preview
 
-//MARK: - Preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
