@@ -7,21 +7,20 @@
 
 import SwiftUI
 
-struct TituloLargo: ViewModifier{
+struct ContentView: View {
+  var body: some View {
+    Text("Modifiers, customizados!")
+      .tituloPrincipal()
+  }
+}
+
+struct TituloLargo: ViewModifier {
   func body(content: Content) -> some View {
     content
       .font(.largeTitle)
       .foregroundColor(Color.purple)
       .multilineTextAlignment(.center)
       .shadow(radius: 10)
-  }
-}
-
-struct ContentView: View {
-  var body: some View {
-    Text("Modifiers, customizados!")
-      .tituloPrincipal()
-    
   }
 }
 
