@@ -10,7 +10,7 @@ InstaClone
 
 ## 💻 Projeto
 
-Clone Instagram para fixar conhecimento.
+Desafio Irmandade Swift - Faça sua melhor interface.
 
 ## 🚀 Tecnologias utilizadas
 
