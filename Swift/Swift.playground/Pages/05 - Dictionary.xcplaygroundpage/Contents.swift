@@ -97,8 +97,4 @@ if let oldValue = states2.updateValue("Curitiba", forKey: "PR"){
 
 
 print(states2)
-
-
-
-
 //: [Next](@next)

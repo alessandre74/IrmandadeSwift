@@ -57,14 +57,4 @@ let pessoa: (String, Int) -> String = { nome, idade in
 
 print(pessoa("Alessandre", 48))
 
-
-
-
-
-
-
-
-
-
-
 //: [Next](@next)

@@ -78,16 +78,4 @@ var mac2: Computer2? = Computer2(model: "Mac mini", storage: 512)
 print(mac2 ?? "Não existe")
 
 mac2 = nil
-
-
-
-
-
-
-
-
-
-
-
-
 //: [Next](@next)

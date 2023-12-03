@@ -73,13 +73,4 @@ print("Dicionário Ordenado Depois")
 print(seqDicionarioOrdenado)
 print(" ")
 
-
-
-
-
-
-
-
-
-
 //: [Next](@next)

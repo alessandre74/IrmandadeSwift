@@ -115,11 +115,4 @@ class Car1: Vehicle1{
 
 var fusca = Car1(power: 50, passangers: 4, model: "VW Fusca 1600")
 print(fusca.model)
-
-
-
-
-
-
-
 //: [Next](@next)
